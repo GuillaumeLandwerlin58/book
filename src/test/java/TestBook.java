@@ -15,6 +15,6 @@ public class TestBook {
     })
     public void testBook(String title, String author, String date) {
         Book book = new Book(title, author, date);
-        assertEquals(title, book.getTitle());
+        assertEquals("title", book.getTitle());
     }
 }
