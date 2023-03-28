@@ -1,5 +1,3 @@
-package TestBank;
-
 import Bank.Account;
 import Bank.Bank;
 import org.junit.Test;
