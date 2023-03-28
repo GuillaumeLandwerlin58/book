@@ -1,7 +1,11 @@
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.testng.annotations.Test;
 import org.junit.jupiter.params.provider.CsvSource;
 
 public class TestBook {
+    @DisplayName("Book")
+    @ParameterizedTest(name = "converting {0} should return {1}")
     @CsvSource({
             "The Hobbit, J.R.R. Tolkien, 1937",
             "The Lord of the Rings, J.R.R. Tolkien, 1954",
