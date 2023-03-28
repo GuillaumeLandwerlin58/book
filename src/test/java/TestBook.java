@@ -3,6 +3,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.testng.annotations.Test;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class TestBook {
     @DisplayName("Book")
     @ParameterizedTest(name = "converting {0} should return {1}")
@@ -13,8 +15,6 @@ public class TestBook {
     })
     public void testBook(String title, String author, String date) {
         Book book = new Book(title, author, date);
-        System.out.println(book.getTitle());
-        System.out.println(book.getAuthor());
-        System.out.println(book.getDate());
+        assertEquals(title, book.getTitle());
     }
 }
