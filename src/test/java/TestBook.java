@@ -1,6 +1,6 @@
+import Book.Book;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.testng.annotations.Test;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -15,6 +15,6 @@ public class TestBook {
     })
     public void testBook(String title, String author, String date) {
         Book book = new Book(title, author, date);
-        assertEquals("title", book.getTitle());
+        assertEquals(title, book.getTitle());
     }
 }
